@@ -33,13 +33,20 @@ canvas.grid(column=2, row=2)
 
 # labels
 
-timer = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 35, "bold"))
+timer = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50, "bold"))
 timer.grid(column=2, row=1)
 
-timer = Label(text="Start", fg="black", bg="white", font=(FONT_NAME, 10))
+check_marks = Label(text=" ✔", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 20, "bold"))
+check_marks.grid(column=2, row=4)
+
+# bottons
+
+timer = Button(text="Start", fg="black", bg="white", font=(FONT_NAME, 10))
 timer.grid(column=1, row=3)
 
-timer = Label(text="Reset", fg="black", bg="white", font=(FONT_NAME, 10))
-timer.grid(column=3, row=3)
+reset = Button(text="Reset", fg="black", bg="white", font=(FONT_NAME, 10))
+reset.grid(column=3, row=3)
+
+
 
 window.mainloop()
