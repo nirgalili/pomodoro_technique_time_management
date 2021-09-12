@@ -16,17 +16,30 @@ LONG_BREAK_MIN = 20
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 
 # ---------------------------- UI SETUP ------------------------------- #
+
+# window
+
 window = Tk()
 window.title("Pomodoro")
-window.config(padx=100, pady=100, bg=YELLOW)
+window.config(padx=50, pady=30, bg=YELLOW)
+
+# canvas
 
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 tomato_img = PhotoImage(file="tomato.png")
 canvas.create_image(100, 112, image=tomato_img)
 canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
+canvas.grid(column=2, row=2)
 
-canvas.pack()
+# labels
 
+timer = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 35, "bold"))
+timer.grid(column=2, row=1)
 
+timer = Label(text="Start", fg="black", bg="white", font=(FONT_NAME, 10))
+timer.grid(column=1, row=3)
+
+timer = Label(text="Reset", fg="black", bg="white", font=(FONT_NAME, 10))
+timer.grid(column=3, row=3)
 
 window.mainloop()
